@@ -156,6 +156,7 @@ class Process {
     let group: MultiThreadedEventLoopGroup
     
     init(host: String, username: String, key: TyPrvKey) throws {
+        print("Init process with\n host:\(host)\nusername:\(username)")
         self.group = MultiThreadedEventLoopGroup(numberOfThreads: 1)
 
         let bootstrap = ClientBootstrap(group: group)
@@ -168,6 +169,7 @@ class Process {
         self.channel = try bootstrap.connect(host: host, port: 22).wait()
     }
     deinit {
+        print("deinit process...")
         try! self.channel.close().wait()
         try! self.group.syncShutdownGracefully()
     }

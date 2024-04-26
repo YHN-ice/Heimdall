@@ -27,17 +27,21 @@ func destroyKey() {
 struct ContentView: View {
     @State private var process:Process? = nil
     @State private var pubkey:String? = nil
-    
+    @State private var username = "fill me"
+    @State private var hostip = "fill me"
+
     var body: some View {
         ScrollView {
 //            Image(systemName: "globe")
 //                .imageScale(.large)
 //                .foregroundStyle(.tint)
+            Text("make sure the IP and username is correct before doing anything").foregroundStyle(.green)
+            UserInput(username: $username, host: $hostip)
             VerticalBarView(process: $process)
             Button("Creat Process") {
                 if let (prvKey, _) = loadKey(), self.process==nil {
                     print("trying to create process")
-                    self.process = try! Process(host: "host", username: "username", key: prvKey)
+                    self.process = try! Process(host: hostip, username: username, key: prvKey)
                 } else if self.process != nil {
                     print("process already existed")
                 } else {
