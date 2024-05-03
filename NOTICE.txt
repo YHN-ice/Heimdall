@@ -1,0 +1,19 @@
+Heimdall
+Copyright (c) 2024 YHN-ice
+
+This product includes software (as dependency or code snippets) developed by the following projects:
+
+This project is dependent on swift-crypto to implement authentication:
+Copyright 2019 The SwiftCrypto Project (https://github.com/apple/swift-crypto)
+swift-crypto is licensed under the Apache License, Version 2.0 (the "License");
+You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+This project is dependent on swift-nio-ssh to implement SSH communication:
+Copyright 2020 The SwiftNIO Project (https://github.com/apple/swift-nio-ssh.git)
+swift-nio-ssh is licensed under the Apache License, Version 2.0 (the "License");
+You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+This project's pubkey display form is based on source code from SwiftTermApp
+Copyright (c) 2023 Miguel de Icaza
+SwiftTermApp is licensed under the MIT License; you may obtain a copy at https://opensource.org/licenses/MIT
+
